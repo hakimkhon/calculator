@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D5CFCF"
+    tools:context=".MainActivity">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/natija"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:layout_marginTop="20sp"
+        app:cardUseCompatPadding="true">
+
+        <EditText
+            android:id="@+id/edidNatija"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:cursorVisible="false"
+            android:gravity="center_vertical|end"
+            android:inputType="number"
+            android:clickable="false"
+            android:focusableInTouchMode="false"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="10dp"
+            android:textSize="28sp"
+            android:maxLength="14"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/malumot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/natija"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+
+        android:layout_marginBottom="10dp"
+        android:gravity="end"
+        android:textColor="@color/tuqKulrang"
+        android:textSize="24sp" />
+    <LinearLayout
+        android:id="@+id/containerNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="40dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp">
+
+            <Button
+                android:id="@+id/btnC"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/style_tugmalar"
+                android:text="C"
+                android:onClick="raqamBosish"
+                android:textSize="20sp"
+                app:backgroundTint="@color/qizil" />
+
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/style_tugmalar"
+                android:text="del"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:onClick="raqamBosish"
+                android:textColor="@color/black"
+                app:backgroundTint="@color/laym"
+                />
+
+            <Button
+                android:id="@+id/btnFoiz"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/style_tugmalar"
+                android:text="%"
+                android:onClick="raqamBosish"
+                android:textSize="20sp"
+                app:backgroundTint="@color/tuqKulrang" />
+
+            <Button
+                android:id="@+id/btnBulish"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2dp"
+                android:layout_weight="1.3"
+                android:background="@drawable/style_tugmalar"
+                android:text="/"
+                android:onClick="matematikAmallar"
+                android:textSize="20sp"
+                app:backgroundTint="@color/siyohrang" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp">
+
+            <Button
+                android:id="@+id/btnSeven"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/style_tugmalar"
+                android:text="7"
+                android:onClick="raqamBosish"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/kulrang"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/btnEight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/style_tugmalar"
+                android:text="8"
+                android:onClick="raqamBosish"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/kulrang" />
+
+            <Button
+                android:id="@+id/btnNine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/style_tugmalar"
+                android:text="9"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:onClick="raqamBosish"
+                app:backgroundTint="@color/kulrang" />
+
+            <Button
+                android:id="@+id/btnKupaytrish"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2dp"
+                android:layout_weight="1.3"
+                android:background="@drawable/style_tugmalar"
+                android:text="x"
+                android:onClick="matematikAmallar"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                app:backgroundTint="@color/siyohrang" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp">
+
+            <Button
+                android:id="@+id/btnFour"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/style_tugmalar"
+                android:text="4"
+                android:onClick="raqamBosish"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/kulrang" />
+
+            <Button
+                android:id="@+id/btnFive"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/style_tugmalar"
+                android:text="5"
+                android:onClick="raqamBosish"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/kulrang" />
+
+            <Button
+                android:id="@+id/btnSix"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/style_tugmalar"
+                android:text="6"
+                android:onClick="raqamBosish"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/kulrang" />
+
+            <Button
+                android:id="@+id/btnMinus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2dp"
+                android:layout_weight="1.3"
+                android:background="@drawable/style_tugmalar"
+                android:text="-"
+                android:onClick="matematikAmallar"
+                android:textSize="20sp"
+                app:backgroundTint="@color/siyohrang" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp">
+
+            <Button
+                android:id="@+id/btnOne"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/style_tugmalar"
+                android:text="1"
+                android:onClick="raqamBosish"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/kulrang" />
+
+            <Button
+                android:id="@+id/btnTwo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/style_tugmalar"
+                android:text="2"
+                android:onClick="raqamBosish"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/kulrang" />
+
+            <Button
+                android:id="@+id/btnThree"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/style_tugmalar"
+                android:text="3"
+                android:onClick="raqamBosish"
+                android:textColor=""
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/kulrang" />
+
+            <Button
+                android:id="@+id/btnPlus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2dp"
+                android:layout_weight="1.3"
+                android:background="@drawable/style_amallar"
+                android:text="+"
+                android:textSize="20sp"
+                android:onClick="matematikAmallar"
+                app:backgroundTint="@color/siyohrang" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp">
+
+            <Button
+                android:id="@+id/btnPlusMinus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/style_tugmalar"
+                android:text="+/-"
+                android:onClick="raqamBosish"
+                android:textSize="20sp"
+                app:backgroundTint="@color/tuqKulrang" />
+
+            <Button
+                android:id="@+id/btnZero"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/style_tugmalar"
+                android:text="0"
+                android:onClick="raqamBosish"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/kulrang"
+                />
+
+            <Button
+                android:id="@+id/btnNuqta"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/style_tugmalar"
+                android:text="."
+                android:onClick="raqamBosish"
+                android:textSize="20sp"
+                app:backgroundTint="@color/tuqKulrang" />
+
+            <Button
+                android:id="@+id/btnBarobar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2dp"
+                android:layout_weight="1.3"
+                android:background="@drawable/style_tugmalar"
+                android:text="="
+                android:onClick="barobar"
+                android:textSize="20sp"
+                app:backgroundTint="@color/purple_700"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
